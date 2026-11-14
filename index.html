@@ -1,3 +1,4 @@
+﻿<!-- @copyright Bản quyền thuộc MH 2026 -->
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -6,12 +7,17 @@
     <title>Học Nhanh Kinh Tế Chính Trị Mác - Lênin</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Plus Jakarta Sans & Be Vietnam Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
             background-color: #f8fafc;
+        }
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Be Vietnam Pro', 'Plus Jakarta Sans', sans-serif;
         }
         /* Card Flip Animation Classes */
         .perspective-1000 {
@@ -50,14 +56,14 @@
     <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div class="flex items-center gap-3">
-                <div class="bg-indigo-600 text-white p-2.5 rounded-xl shadow-md shadow-indigo-200">
+                <div class="bg-blue-600 text-white p-2.5 rounded-xl shadow-md shadow-blue-200">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                     </svg>
                 </div>
                 <div>
                     <h1 class="font-extrabold text-lg text-slate-900 tracking-tight flex items-center gap-2">
-                        Kinh Tế Chính Trị <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full font-semibold">Mác-Lênin</span>
+                        Kinh Tế Chính Trị <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-semibold">Mác-Lênin</span>
                     </h1>
                     <p class="text-xs text-slate-500">Học thông minh - Thuộc siêu nhanh</p>
                 </div>
@@ -67,11 +73,11 @@
             <div class="flex items-center gap-4 w-full sm:w-auto">
                 <div class="flex-1 sm:w-48">
                     <div class="flex justify-between text-xs font-semibold mb-1">
-                        <span class="text-indigo-600">Tiến độ thuộc bài:</span>
+                        <span class="text-blue-600">Tiến độ thuộc bài:</span>
                         <span id="progress-percent" class="text-slate-700">0%</span>
                     </div>
                     <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                        <div id="progress-bar" class="bg-indigo-600 h-full w-0 transition-all duration-500 ease-out"></div>
+                        <div id="progress-bar" class="bg-blue-600 h-full w-0 transition-all duration-500 ease-out"></div>
                     </div>
                 </div>
                 <div class="text-center bg-slate-50 border border-slate-100 px-3 py-1.5 rounded-xl hidden md:block">
@@ -89,7 +95,7 @@
         
         <!-- Interactive Mode Selector Tabs -->
         <div class="bg-slate-100 p-1.5 rounded-2xl flex flex-wrap gap-1 sm:gap-2">
-            <button onclick="switchMode('list')" id="tab-list" class="flex-1 min-w-[120px] flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-sm transition-all duration-200 bg-white text-indigo-700 shadow-sm">
+            <button onclick="switchMode('list')" id="tab-list" class="flex-1 min-w-[120px] flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-sm transition-all duration-200 bg-white text-blue-700 shadow-sm">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 Danh Sách Học Nhanh
             </button>
@@ -117,7 +123,7 @@
                 <div>
                     <h3 class="font-bold text-sm text-slate-800 flex items-center gap-1.5">
                         Đồng Bộ Đa Thiết Bị
-                        <span class="text-[10px] bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-full font-bold">Thời gian thực ⇄</span>
+                        <span class="text-[10px] bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-bold">Thời gian thực ⇄</span>
                     </h3>
                     <p id="sync-status-indicator" class="text-xs font-semibold text-slate-400">Đang thiết lập kết nối đám mây...</p>
                 </div>
@@ -125,11 +131,11 @@
             <div class="flex flex-wrap items-center gap-3 w-full md:w-auto">
                 <div class="bg-slate-50 border border-slate-200 px-3 py-2 rounded-xl text-center flex-1 md:flex-none">
                     <span class="text-[9px] uppercase font-bold text-slate-400 block tracking-wider leading-none mb-1">Mã Đồng Bộ Của Bạn</span>
-                    <span id="display-sync-code" class="text-base font-extrabold text-indigo-600 tracking-widest uppercase">------</span>
+                    <span id="display-sync-code" class="text-base font-extrabold text-blue-600 tracking-widest uppercase">------</span>
                 </div>
                 <div class="flex gap-2 flex-1 md:flex-none">
-                    <input type="text" id="sync-input" placeholder="Nhập mã từ máy khác..." class="flex-1 max-w-[180px] bg-slate-50 px-3 py-2 border border-slate-200 rounded-xl text-sm font-semibold uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    <button onclick="connectSyncCode()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-4 py-2 rounded-xl text-xs transition-all shadow-md">Kết Nối</button>
+                    <input type="text" id="sync-input" placeholder="Nhập mã từ máy khác..." class="flex-1 max-w-[180px] bg-slate-50 px-3 py-2 border border-slate-200 rounded-xl text-sm font-semibold uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button onclick="connectSyncCode()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-xl text-xs transition-all shadow-md">Kết Nối</button>
                 </div>
             </div>
         </div>
@@ -139,7 +145,7 @@
             <!-- Category Filters -->
             <div class="flex flex-wrap items-center gap-2" id="part-filters">
                 <span class="text-xs font-bold uppercase tracking-wider text-slate-400 mr-1">Chủ đề:</span>
-                <button onclick="filterPart('all')" class="part-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-indigo-600 text-white" data-part="all">Tất cả (86 câu)</button>
+                <button onclick="filterPart('all')" class="part-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-blue-600 text-white" data-part="all">Tất cả (86 câu)</button>
                 
                 <!-- 50 EASY & SHORT QUESTIONS FILTER BUTTON -->
                 <button onclick="filterPart('easy')" class="part-btn px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200 flex items-center gap-1.5" data-part="easy">
@@ -162,7 +168,7 @@
                 <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                 </span>
-                <input type="text" id="search-input" oninput="handleSearch()" placeholder="Tìm nhanh câu hỏi, từ khóa..." class="w-full pl-9 pr-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-slate-50">
+                <input type="text" id="search-input" oninput="handleSearch()" placeholder="Tìm nhanh câu hỏi, từ khóa..." class="w-full pl-9 pr-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-slate-50">
             </div>
         </div>
 
@@ -171,7 +177,7 @@
             <div class="flex items-center justify-between">
                 <span id="list-count-label" class="text-xs font-bold text-slate-400 uppercase tracking-wider">Đang hiển thị: 86 câu</span>
                 <div class="flex gap-2">
-                    <button onclick="toggleAllAnswers(true)" class="text-xs font-bold text-indigo-600 hover:text-indigo-800 bg-indigo-50 hover:bg-indigo-100 px-3 py-1.5 rounded-lg transition-all">Hiện tất cả đáp án</button>
+                    <button onclick="toggleAllAnswers(true)" class="text-xs font-bold text-blue-600 hover:text-blue-800 bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-lg transition-all">Hiện tất cả đáp án</button>
                     <button onclick="toggleAllAnswers(false)" class="text-xs font-bold text-slate-600 hover:text-slate-800 bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-lg transition-all">Ẩn tất cả</button>
                 </div>
             </div>
@@ -186,7 +192,7 @@
         <section id="mode-flashcards" class="hidden flex-col items-center justify-center py-6 gap-6 max-w-2xl mx-auto w-full">
             <div class="text-center">
                 <span class="text-xs font-bold text-slate-400 tracking-wider uppercase">Thẻ số <span id="card-index-indicator">1</span> / <span id="card-total-indicator">86</span></span>
-                <h3 class="text-sm font-semibold text-indigo-600 mt-1" id="card-part-indicator">PHẦN I: KHÁI QUÁT CHUNG</h3>
+                <h3 class="text-sm font-semibold text-blue-600 mt-1" id="card-part-indicator">PHẦN I: KHÁI QUÁT CHUNG</h3>
             </div>
 
             <!-- 3D Card Object Container -->
@@ -196,7 +202,7 @@
                     <!-- Front Side (Question) -->
                     <div class="absolute inset-0 w-full h-full backface-hidden p-8 flex flex-col justify-between rounded-3xl bg-gradient-to-br from-white to-slate-50">
                         <div class="flex justify-between items-start">
-                            <span class="bg-indigo-50 text-indigo-700 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide flex items-center gap-1">
+                            <span class="bg-blue-50 text-blue-700 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide flex items-center gap-1">
                                 CÂU HỎI <span id="card-easy-badge" class="hidden bg-emerald-500 text-white text-[9px] px-1.5 py-0.5 rounded-full">DỄ & NGẮN ⚡</span>
                             </span>
                             <button onclick="toggleCardFavorite(event)" class="text-slate-300 hover:text-amber-500 transition-colors">
@@ -207,7 +213,7 @@
                             <p class="text-xl sm:text-2xl font-bold text-slate-800 leading-snug" id="card-question-text">Đang tải...</p>
                         </div>
                         <div class="text-center text-xs text-slate-400 font-medium">
-                            Chạm hoặc nhấn phím <span class="bg-indigo-100 px-1.5 py-0.5 rounded text-indigo-700 font-bold">Enter</span> / <span class="bg-slate-200 px-1.5 py-0.5 rounded text-slate-600 font-bold">Space</span> để lật hoặc chuyển câu cực nhanh!
+                            Chạm hoặc nhấn phím <span class="bg-blue-100 px-1.5 py-0.5 rounded text-blue-700 font-bold">Enter</span> / <span class="bg-slate-200 px-1.5 py-0.5 rounded text-slate-600 font-bold">Space</span> để lật hoặc chuyển câu cực nhanh!
                         </div>
                     </div>
 
@@ -220,7 +226,7 @@
                             <p class="text-lg sm:text-xl font-medium text-emerald-300 leading-relaxed" id="card-answer-text">Đang tải...</p>
                         </div>
                         <div class="text-center text-xs text-slate-400 font-medium">
-                            Chạm / Nhấn phím <span class="bg-indigo-500 text-white px-1.5 py-0.5 rounded font-bold">Enter</span> để chuyển sang câu tiếp theo
+                            Chạm / Nhấn phím <span class="bg-blue-500 text-white px-1.5 py-0.5 rounded font-bold">Enter</span> để chuyển sang câu tiếp theo
                         </div>
                     </div>
 
@@ -258,9 +264,9 @@
         <!-- ================= MODE 3: SMART QUIZ ================= -->
         <section id="mode-quiz" class="hidden flex-col max-w-2xl mx-auto w-full gap-6">
             <!-- Status & Score Display -->
-            <div class="bg-gradient-to-r from-indigo-900 to-slate-900 text-white p-6 rounded-3xl shadow-lg flex justify-between items-center">
+            <div class="bg-gradient-to-r from-blue-900 to-slate-900 text-white p-6 rounded-3xl shadow-lg flex justify-between items-center">
                 <div>
-                    <span class="text-xs font-bold text-indigo-300 uppercase tracking-wider">Trắc Nghiệm Tương Tác</span>
+                    <span class="text-xs font-bold text-blue-300 uppercase tracking-wider">Trắc Nghiệm Tương Tác</span>
                     <h2 class="text-lg font-bold">Kiểm Tra Kiến Thức</h2>
                 </div>
                 <div class="text-right">
@@ -272,7 +278,7 @@
             <!-- QUIZ CUSTOM CONFIGURATION PANEL -->
             <div class="bg-white border border-slate-200 rounded-3xl p-5 shadow-sm flex flex-col gap-4">
                 <h3 class="text-xs font-bold text-slate-800 flex items-center gap-2">
-                    <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                     Cài đặt bài ôn tập trắc nghiệm
                 </h3>
                 
@@ -321,7 +327,7 @@
             <!-- Active Quiz Question Card -->
             <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col gap-6">
                 <div>
-                    <span class="bg-indigo-50 text-indigo-700 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide" id="quiz-question-part">PHẦN I</span>
+                    <span class="bg-blue-50 text-blue-700 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide" id="quiz-question-part">PHẦN I</span>
                     <h3 class="text-xl font-bold text-slate-800 mt-3 leading-snug" id="quiz-question-text">Câu hỏi trắc nghiệm sẽ hiển thị ở đây?</h3>
                 </div>
 
@@ -340,7 +346,7 @@
                     <button onclick="resetQuiz()" class="text-xs font-bold text-slate-500 hover:text-slate-800 bg-slate-50 hover:bg-slate-100 border border-slate-200 px-4 py-2.5 rounded-xl transition-all">
                         Làm lại từ đầu
                     </button>
-                    <button id="quiz-next-btn" onclick="handleNextQuizClick()" class="hidden items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-2xl shadow-md transition-all text-sm">
+                    <button id="quiz-next-btn" onclick="handleNextQuizClick()" class="hidden items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl shadow-md transition-all text-sm">
                         Câu tiếp theo
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </button>
@@ -375,9 +381,9 @@
                 <div class="flex flex-col gap-2">
                     <div class="flex justify-between items-center">
                         <span class="text-xs font-bold text-slate-500 uppercase">Thời gian làm bài:</span>
-                        <span id="timed-minutes-label" class="text-lg font-extrabold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-xl border border-indigo-100">15 Phút</span>
+                        <span id="timed-minutes-label" class="text-lg font-extrabold text-blue-600 bg-blue-50 px-3 py-1 rounded-xl border border-blue-100">15 Phút</span>
                     </div>
-                    <input type="range" id="timed-time-slider" min="2" max="60" value="15" oninput="updateTimedSliderLabel(this.value)" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600">
+                    <input type="range" id="timed-time-slider" min="2" max="60" value="15" oninput="updateTimedSliderLabel(this.value)" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
                     <div class="flex justify-between text-[10px] font-bold text-slate-400">
                         <span>2 Phút</span>
                         <span>15 Phút</span>
@@ -400,7 +406,7 @@
                     </div>
                 </div>
 
-                <button onclick="startTimedExam()" class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold rounded-2xl shadow-lg transition-all text-sm tracking-wide">
+                <button onclick="startTimedExam()" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-extrabold rounded-2xl shadow-lg transition-all text-sm tracking-wide">
                     Bắt Đầu Làm Bài 🚀
                 </button>
             </div>
@@ -408,8 +414,8 @@
             <!-- Active Test Card (Visible during test) -->
             <div id="timed-active-card" class="hidden bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col gap-6">
                 <div class="flex justify-between items-center border-b border-slate-100 pb-3">
-                    <span class="text-xs font-bold text-indigo-600 uppercase" id="timed-question-indicator">Câu hỏi 1 / 10</span>
-                    <span class="text-[10px] bg-indigo-50 text-indigo-700 font-bold px-2 py-0.5 rounded-full" id="timed-question-part">PHẦN I</span>
+                    <span class="text-xs font-bold text-blue-600 uppercase" id="timed-question-indicator">Câu hỏi 1 / 10</span>
+                    <span class="text-[10px] bg-blue-50 text-blue-700 font-bold px-2 py-0.5 rounded-full" id="timed-question-part">PHẦN I</span>
                 </div>
 
                 <div>
@@ -434,7 +440,7 @@
 
             <!-- Score Summary Card (Visible after test finishes) -->
             <div id="timed-score-card" class="hidden bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col items-center text-center gap-6">
-                <div class="bg-indigo-50 text-indigo-600 p-4 rounded-full" id="timed-result-icon">
+                <div class="bg-blue-50 text-blue-600 p-4 rounded-full" id="timed-result-icon">
                     🏆
                 </div>
                 <div>
@@ -444,7 +450,7 @@
 
                 <div class="grid grid-cols-3 gap-4 w-full max-w-sm">
                     <div class="bg-slate-50 p-3 rounded-2xl border border-slate-100">
-                        <span class="text-lg font-black text-indigo-600 block" id="stat-correct">0</span>
+                        <span class="text-lg font-black text-blue-600 block" id="stat-correct">0</span>
                         <span class="text-[10px] text-slate-400 font-bold block uppercase">Chính xác</span>
                     </div>
                     <div class="bg-slate-50 p-3 rounded-2xl border border-slate-100">
@@ -461,7 +467,7 @@
                     <button onclick="resetTimedExamSetup()" class="flex-1 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-2xl text-xs transition-all">
                         Cấu Hình Lại ⚙️
                     </button>
-                    <button onclick="startTimedExam()" class="flex-1 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-2xl text-xs transition-all shadow-md">
+                    <button onclick="startTimedExam()" class="flex-1 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl text-xs transition-all shadow-md">
                         Thi Lại Ngay 🚀
                     </button>
                 </div>
@@ -473,12 +479,12 @@
     <!-- Global Custom Notification Modal (Replacement for window.alert) -->
     <div id="custom-modal" class="fixed inset-0 bg-slate-900/60 flex items-center justify-center p-4 z-50 hidden opacity-0 transition-opacity duration-300">
         <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl transform scale-95 transition-transform duration-300 flex flex-col items-center text-center gap-4">
-            <div id="modal-icon-container" class="bg-indigo-50 text-indigo-600 p-3 rounded-full">
+            <div id="modal-icon-container" class="bg-blue-50 text-blue-600 p-3 rounded-full">
                 <!-- SVG Icon populated dynamically -->
             </div>
             <h3 id="modal-title" class="text-lg font-bold text-slate-900">Thông báo</h3>
             <p id="modal-desc" class="text-sm text-slate-500 leading-relaxed">Nội dung thông báo chi tiết.</p>
-            <button onclick="closeModal()" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition-all text-sm shadow-md">Đóng</button>
+            <button onclick="closeModal()" class="w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all text-sm shadow-md">Đóng</button>
         </div>
     </div>
 
@@ -804,7 +810,7 @@
             tabs.forEach(t => {
                 const tabBtn = document.getElementById(`tab-${t}`);
                 if (t === mode) {
-                    tabBtn.className = "flex-1 min-w-[120px] flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-sm transition-all duration-200 bg-white text-indigo-700 shadow-sm";
+                    tabBtn.className = "flex-1 min-w-[120px] flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-sm transition-all duration-200 bg-white text-blue-700 shadow-sm";
                 } else {
                     tabBtn.className = "flex-1 min-w-[120px] flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900";
                 }
@@ -877,7 +883,7 @@
                         <!-- Card Header -->
                         <div class="flex items-start justify-between gap-4">
                             <div>
-                                <span class="bg-indigo-50 text-indigo-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide mr-2">${q.part}</span>
+                                <span class="bg-blue-50 text-blue-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide mr-2">${q.part}</span>
                                 ${q.easy ? `<span class="bg-emerald-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wide mr-2">⚡ Dễ & Ngắn</span>` : ''}
                                 <span class="text-slate-400 text-xs font-semibold">Câu ${q.id}</span>
                             </div>
@@ -902,11 +908,11 @@
 
                         <!-- Answer Body (Collapsible) -->
                         <div class="border-t border-slate-100 pt-3">
-                            <button onclick="toggleAnswerVisibility(${q.id})" class="text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 focus:outline-none mb-2">
+                            <button onclick="toggleAnswerVisibility(${q.id})" class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 focus:outline-none mb-2">
                                 <span id="eye-icon-${q.id}"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg></span>
                                 <span id="btn-text-${q.id}">Hiện đáp án</span>
                             </button>
-                            <div id="answer-text-${q.id}" class="hidden text-sm text-slate-600 font-semibold pl-2 border-l-2 border-indigo-400 py-1 transition-all">
+                            <div id="answer-text-${q.id}" class="hidden text-sm text-slate-600 font-semibold pl-2 border-l-2 border-blue-400 py-1 transition-all">
                                 ${q.answer}
                             </div>
                         </div>
@@ -966,7 +972,7 @@
                     } else if (part === 'fav') {
                         btn.className = "part-btn px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-amber-500 text-white shadow-sm border border-amber-500";
                     } else {
-                        btn.className = "part-btn px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-indigo-600 text-white shadow-sm";
+                        btn.className = "part-btn px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-blue-600 text-white shadow-sm";
                     }
                 } else {
                     if (btn.getAttribute('data-part') === 'easy') {
@@ -1178,7 +1184,7 @@
         // Custom brief notification toast
         function showToast(msg, type) {
             const toast = document.createElement('div');
-            toast.className = `fixed bottom-6 right-6 px-4 py-3 rounded-2xl text-xs font-bold text-white shadow-xl z-50 transition-all duration-300 transform translate-y-10 opacity-0 flex items-center gap-2 ${type === 'success' ? 'bg-emerald-600' : 'bg-indigo-600'}`;
+            toast.className = `fixed bottom-6 right-6 px-4 py-3 rounded-2xl text-xs font-bold text-white shadow-xl z-50 transition-all duration-300 transform translate-y-10 opacity-0 flex items-center gap-2 ${type === 'success' ? 'bg-emerald-600' : 'bg-blue-600'}`;
             toast.innerHTML = `
                 ${type === 'success' ? '✔' : 'ℹ'} ${msg}
             `;
@@ -1250,7 +1256,7 @@
             const rangeAll = document.getElementById('btn-range-all');
             const rangeEasy = document.getElementById('btn-range-easy');
             if (window.quizRange === 'all') {
-                rangeAll.className = "flex-1 py-1.5 text-[11px] font-bold rounded-lg transition-all bg-indigo-600 text-white shadow-sm";
+                rangeAll.className = "flex-1 py-1.5 text-[11px] font-bold rounded-lg transition-all bg-blue-600 text-white shadow-sm";
                 rangeEasy.className = "flex-1 py-1.5 text-[11px] font-bold rounded-lg transition-all text-slate-600 hover:text-slate-800";
             } else {
                 rangeAll.className = "flex-1 py-1.5 text-[11px] font-bold rounded-lg transition-all text-slate-600 hover:text-slate-800";
@@ -1261,22 +1267,22 @@
             const qTrue = document.getElementById('btn-q-shuffle-true');
             const qFalse = document.getElementById('btn-q-shuffle-false');
             if (window.quizShuffleQuestions) {
-                qTrue.className = "flex-1 py-1.5 text-[11px] font-bold rounded-lg transition-all bg-indigo-600 text-white shadow-sm";
+                qTrue.className = "flex-1 py-1.5 text-[11px] font-bold rounded-lg transition-all bg-blue-600 text-white shadow-sm";
                 qFalse.className = "flex-1 py-1.5 text-[11px] font-bold rounded-lg transition-all text-slate-600 hover:text-slate-800";
             } else {
                 qTrue.className = "flex-1 py-1.5 text-[11px] font-bold rounded-lg transition-all text-slate-600 hover:text-slate-800";
-                qFalse.className = "flex-1 py-1.5 text-[11px] font-bold rounded-lg transition-all bg-indigo-600 text-white shadow-sm";
+                qFalse.className = "flex-1 py-1.5 text-[11px] font-bold rounded-lg transition-all bg-blue-600 text-white shadow-sm";
             }
 
             // Shuffle Answers Toggle
             const aTrue = document.getElementById('btn-a-shuffle-true');
             const aFalse = document.getElementById('btn-a-shuffle-false');
             if (window.quizShuffleAnswers) {
-                aTrue.className = "flex-1 py-1.5 text-[11px] font-bold rounded-lg transition-all bg-indigo-600 text-white shadow-sm";
+                aTrue.className = "flex-1 py-1.5 text-[11px] font-bold rounded-lg transition-all bg-blue-600 text-white shadow-sm";
                 aFalse.className = "flex-1 py-1.5 text-[11px] font-bold rounded-lg transition-all text-slate-600 hover:text-slate-800";
             } else {
                 aTrue.className = "flex-1 py-1.5 text-[11px] font-bold rounded-lg transition-all text-slate-600 hover:text-slate-800";
-                aFalse.className = "flex-1 py-1.5 text-[11px] font-bold rounded-lg transition-all bg-indigo-600 text-white shadow-sm";
+                aFalse.className = "flex-1 py-1.5 text-[11px] font-bold rounded-lg transition-all bg-blue-600 text-white shadow-sm";
             }
         }
 
@@ -1365,7 +1371,7 @@
             optionsContainer.innerHTML = allOptions.map((opt, idx) => {
                 const label = String.fromCharCode(65 + idx); // A, B, C, D
                 return `
-                    <button onclick="submitQuizAnswer('${opt.replace(/'/g, "\\'")}', this)" class="option-btn text-left p-4 rounded-2xl border border-slate-200 hover:border-indigo-400 hover:bg-indigo-50/50 transition-all font-semibold text-sm flex gap-4 items-start focus:outline-none">
+                    <button onclick="submitQuizAnswer('${opt.replace(/'/g, "\\'")}', this)" class="option-btn text-left p-4 rounded-2xl border border-slate-200 hover:border-blue-400 hover:bg-blue-50/50 transition-all font-semibold text-sm flex gap-4 items-start focus:outline-none">
                         <span class="bg-slate-100 text-slate-600 font-bold px-2 py-0.5 rounded-lg text-xs border border-slate-200 uppercase">${label}</span>
                         <span class="flex-1 text-slate-700 option-text">${opt}</span>
                     </button>
@@ -1424,7 +1430,7 @@
             `;
 
             // Display Next option
-            document.getElementById('quiz-next-btn').className = "flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-2xl shadow-md transition-all text-sm animate-pulse";
+            document.getElementById('quiz-next-btn').className = "flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl shadow-md transition-all text-sm animate-pulse";
         }
 
         // Action when Next is clicked
@@ -1449,7 +1455,7 @@
             const btnEasy = document.getElementById('btn-timedpool-easy');
 
             if (poolType === 'all') {
-                btnAll.className = "py-3 px-4 rounded-xl text-xs font-bold border transition-all text-slate-700 bg-indigo-50 border-indigo-200 font-extrabold";
+                btnAll.className = "py-3 px-4 rounded-xl text-xs font-bold border transition-all text-slate-700 bg-blue-50 border-blue-200 font-extrabold";
                 btnEasy.className = "py-3 px-4 rounded-xl text-xs font-bold border transition-all text-slate-500 bg-white border-slate-200";
             } else {
                 btnAll.className = "py-3 px-4 rounded-xl text-xs font-bold border transition-all text-slate-500 bg-white border-slate-200";
@@ -1550,8 +1556,8 @@
                 const isSelected = (selectedPrev === opt);
 
                 return `
-                    <button onclick="saveTimedSelection('${opt.replace(/'/g, "\\'")}', this)" class="w-full text-left p-4 rounded-2xl border transition-all font-semibold text-sm flex gap-4 items-start focus:outline-none ${isSelected ? 'border-indigo-600 bg-indigo-50/50' : 'border-slate-200 hover:border-indigo-300' }">
-                        <span class="${isSelected ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-600'} font-bold px-2 py-0.5 rounded-lg text-xs border border-slate-200 uppercase">${label}</span>
+                    <button onclick="saveTimedSelection('${opt.replace(/'/g, "\\'")}', this)" class="w-full text-left p-4 rounded-2xl border transition-all font-semibold text-sm flex gap-4 items-start focus:outline-none ${isSelected ? 'border-blue-600 bg-blue-50/50' : 'border-slate-200 hover:border-blue-300' }">
+                        <span class="${isSelected ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'} font-bold px-2 py-0.5 rounded-lg text-xs border border-slate-200 uppercase">${label}</span>
                         <span class="flex-1 text-slate-700">${opt}</span>
                     </button>
                 `;
